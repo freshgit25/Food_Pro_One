@@ -52,7 +52,7 @@ nav a:hover {
   cursor: pointer;
   font-size: 1.2rem;
   background: white;
-  color: #ff4d4d;
+  color: #0cea7e;
   padding: 6px 12px;
   border-radius: 8px;
   font-weight: bold;
@@ -63,7 +63,7 @@ nav a:hover {
   background: url("https://source.unsplash.com/1600x500/?fastfood") center/cover no-repeat;
   text-align: center;
   padding: 80px 20px;
-  color: rgb(209, 135, 31);
+  color: rgb(209, 223, 26);
   background-repeat: no-repeat;
   border-radius: 10px;
 }
@@ -116,6 +116,7 @@ nav a:hover {
 
 
 .item {
+  margin: 20px 20px 20px 20px;
   display: flex;
   float: left;
   flex-direction: column;
@@ -132,8 +133,9 @@ nav a:hover {
   transform: translateY(-5px);
 }
 .image-container img {
-width: 300px;   /* Small container */
-  height: 200px;
+  margin: 20px 20px 20px 20px;
+  width: 150px;   /* Small container */
+  height: 150px;
   overflow: hidden;
   border-radius: 10px; /* Optional */
 }
