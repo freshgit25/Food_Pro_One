@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastBite - Menu</title>
+  <link rel="stylesheet" href="homepagestyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">🍔 FastBite</div>
+    <nav>
+      <ul>
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="HomePage.html">Menu</a></li>
+        <li><a href="AboutPage.html">About</a></li>
+		<li><a href="ContactPage.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+	<button id="signout-btn" class="signout-btn">Sign out</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to FastBite</h1>
+    <p>Delicious meals, freshly served!</p>
+  </section>
+
+  <!-- Menu Section -->
+  <main class="homepage.html">
+    <!-- Burgers -->
+    <section class="Burgers-section">
+      <h2>🍔 Burgers</h2>
+      <div class="homepage.html-grid">
+        <div class="item" data-name="Classic Cheeseburger" data-price="8.99">
+          <div image-contaner><img src="./Assets/Thai-Sweet-Basil-Chicken-Burger.png" alt="Burger"></div>
+          <h3>Thai Sweet Basil Chicken Burger</h3>
+          <p>Juicy Grilled Chicken, cheddar, lettuce, tomato,cucumber, and special sauce.</p>
+          <span class="price">$8.99</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Bacon BBQ Burger" data-price="9.49">
+          <img src="./Assets/Chicken Jalapeno Gouda burger.jpg" alt="Burger">
+          <h3>Jalapeno Gouda Burger</h3>
+          <p>Smoky bacon, cheddar, crispy onions, and BBQ sauce.</p>
+          <span class="price">$9.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Veggie Delight" data-price="8.49">
+          <img src="./Assets/chiken burger.jpg" alt="Burger">
+          <h3>Veggie Delight</h3>
+          <p>Plant-based patty with avocado and spicy aioli.</p>
+          <span class="price">$8.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wings -->
+    <section class="Wings-section">
+      <h2>🍗 Wings</h2>
+      <div clashomepage.html-grid">
+        <div class="item" data-name="Buffalo Wings" data-price="7.99">
+          <img src="./Assets/Buffalo wings.jpeg" alt="Wings">
+          <h3>Buffalo Wings</h3>
+          <p>Classic hot buffalo wings served with ranch.</p>
+          <span class="price">$7.99</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Honey Sriracha Wings" data-price="8.49">
+          <img src="./Assets/honey-sriracha-chicken-wings-7.jpg" alt="Wings">
+          <h3>Honey Sriracha Wings</h3>
+          <p>Sweet, spicy, and tangy glazed perfection.</p>
+          <span class="price">$8.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="BBQ Wings" data-price="7.49">
+          <img src="./Assets/BBqwings.jpeg" alt="Wings">
+          <h3>BBQ Wings</h3>
+          <p>Smoky BBQ wings grilled until crispy.</p>
+          <span class="price">$7.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chicken Tenders -->
+    <section class ="Tenders-section">
+      <h2>🍗 Chicken Tenders</h2>
+      <div clashomepage.html-grid">
+        <div class="item" data-name="Crispy Tenders" data-price="6.99">
+          <img src="./Assets/Crispy-Chicken-Tenders.jpg" alt="Tenders">
+          <h3>Crispy Tenders</h3>
+          <p>Golden crunchy tenders with your choice of dip.</p>
+          <span class="price">$6.99</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Garlic Parmesan Tenders" data-price="7.49">
+          <img src="./Assets/Garlic-Parmesan-Chicken-Tenders.jpg" alt="Tenders">
+          <h3>Garlic Parmesan Tenders</h3>
+          <p>Buttery garlic sauce with parmesan cheese.</p>
+          <span class="price">$7.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sides -->
+    <section class="Sides-section">
+      <h2>🍟 Side Orders</h2>
+      <div clashomepage.html-grid">
+        <div class="item" data-name="Fries" data-price="3.99">
+          <img src="./Assets/French Fries.jpg"Fries">
+          <h3>Fries</h3>
+          <p>Crispy golden fries with house seasoning.</p>
+          <span class="price">$3.99</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Onion Rings" data-price="4.49">
+          <img src="./Assets/Crispy Seasoned Onion rings.webp" alt="Onion Rings">
+          <h3>Onion Rings</h3>
+          <p>Perfectly battered crispy onion rings.</p>
+          <span class="price">$4.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Mashed Potato" data-price="3.49">
+          <img src="./Assets/Mashed potato.jpg" alt="Mashed Potato">
+          <h3>Mashed Potato</h3>
+          <p>Creamy mashed potatoes served with gravy.</p>
+          <span class="price">$3.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Drinks -->
+    <section class="Drinks-section">
+      <h2>🥤 Drinks</h2>
+      <div class="homepage.html-grid">
+        <div class="item" data-name="Soda" data-price="2.49">
+          <img src="./Assets/Sodas.jpg" alt="Soda">
+          <h3>Soda</h3>
+          <p>Coke, Sprite, Pepsi & more.</p>
+          <span class="price">$2.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Fresh Juice" data-price="3.49">
+          <img src="./Assets/juices.jpg" alt="Juice">
+          <h3>Fresh Juice</h3>
+          <p>Orange, mango & pineapple freshly squeezed.</p>
+          <span class="price">$3.49</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desserts -->
+    <section class="DessertsS-section">
+      <h2>🍰 Desserts</h2>
+      <div class="homepage.html-grid">
+        <div class="item" data-name="Basque Cheesecake" data-price="5.99">
+          <img src="./Assets/Basque-Cheesecake.jpg" alt="Cheesecake">
+          <h3>Basque Cheesecake</h3>
+          <p>Creamy and perfectly caramelized top.</p>
+          <span class="price">$5.99</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Chocolate Mousse" data-price="4.99">
+          <img src="./Assets/Chocolate-Mousse-Cake.webp" alt="Mousse">
+          <h3>Chocolate Mousse</h3>
+          <p>Light, airy and chocolate-rich.</p>
+          <span class="price">$4.99</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Mango Mousse" data-price="4.99">
+          <img src="./Assets/mango-mousse-cake.jpg" alt="Mousse">
+          <h3>Mango Mousse</h3>
+          <p>Tropical mango mousse with fresh puree.</p>
+          <span class="price">$4.99</span>
+          <button class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Section -->
+  <aside id="cart">
+    <h2>Your Cart 🛒</h2>
+    <ul id="cart-items"></ul>
+    <div class="cart-footer">
+      <p>Total: $<span id="cart-total">0.00</span></p>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </aside>
+
+  <script src="homepageScript.js"></script>
+</body>
+</html>

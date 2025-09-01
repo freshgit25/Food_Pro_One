@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FastBite - Sign Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
+
+  <!-- Container -->
+  <div class="bg-white shadow-lg rounded-2xl w-full max-w-md p-8">
+    <!-- Logo -->
+    <div class="flex flex-col items-center mb-6">
+      <div class="text-4xl">🍔</div>
+      <h1 class="text-2xl font-bold text-gray-800">FastBite</h1>
+      <p class="text-gray-500 text-sm">Create your account</p>
+    </div>
+
+    <!-- Sign Up Form -->
+    <form id="signupForm" class="space-y-4">
+      <!-- Full Name -->
+      <div>
+        <label class="block text-gray-700 font-semibold">Full Name</label>
+        <input type="text" id="name" required
+          class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" 
+          placeholder="John Doe">
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-gray-700 font-semibold">Email</label>
+        <input type="email" id="email" required
+          class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          placeholder="example@email.com">
+      </div>
+
+      <!-- Password -->
+      <div class="relative">
+        <label class="block text-gray-700 font-semibold">Password</label>
+        <input type="password" id="password" required
+          class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          placeholder="********">
+        <span onclick="togglePassword('password')" class="absolute right-3 top-9 cursor-pointer text-gray-500">👁️</span>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="relative">
+        <label class="block text-gray-700 font-semibold">Confirm Password</label>
+        <input type="password" id="confirmPassword" required
+          class="w-full mt-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          placeholder="********">
+        <span onclick="togglePassword('confirmPassword')" class="absolute right-3 top-9 cursor-pointer text-gray-500">👁️</span>
+      </div>
+
+      <!-- Sign Up Button -->
+      <button type="submit"
+        class="w-full bg-yellow-400 hover:bg-yellow-500 text-white py-2 rounded-lg font-semibold transition">
+        Sign Up
+      </button>
+    </form>
+
+    <!-- Footer -->
+    <p class="text-center text-sm text-gray-600 mt-6">
+      Already have an account?
+      <a href="login.html" class="text-yellow-500 hover:underline">Log in</a>
+    </p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle password visibility
+    function togglePassword(fieldId) {
+      const field = document.getElementById(fieldId);
+      field.type = field.type === "password" ? "text" : "password";
+    }
+
+    // Handle Sign Up
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      // Save user data to localStorage (for demo)
+      const users = JSON.parse(localStorage.getItem("fastbite_users")) || [];
+      const exists = users.find(u => u.email === email);
+      if (exists) {
+        alert("Email already registered!");
+        return;
+      }
+
+      users.push({ name, email, password });
+      localStorage.setItem("fastbite_users", JSON.stringify(users));
+
+      alert("Account created successfully! Please log in.");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
